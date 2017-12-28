@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7709E6EB1FF4D0B700AA7E1D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7709E6E91FF4D0B700AA7E1D /* LoginViewController.xib */; };
+		7709E6EC1FF4D0B700AA7E1D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709E6EA1FF4D0B700AA7E1D /* LoginViewController.swift */; };
 		77D4AD2B1FF378140040BBE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD2A1FF378140040BBE5 /* AppDelegate.swift */; };
 		77D4AD301FF378140040BBE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AD2E1FF378140040BBE5 /* Main.storyboard */; };
 		77D4AD331FF378140040BBE5 /* ReachApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD311FF378140040BBE5 /* ReachApp.xcdatamodeld */; };
 		77D4AD351FF378140040BBE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AD341FF378140040BBE5 /* Assets.xcassets */; };
 		77D4AD381FF378140040BBE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AD361FF378140040BBE5 /* LaunchScreen.storyboard */; };
-		77D4AD4B1FF38B660040BBE5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD491FF38B660040BBE5 /* LoginViewController.swift */; };
-		77D4AD4C1FF38B660040BBE5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AD4A1FF38B660040BBE5 /* LoginViewController.xib */; };
 		77D4AD4E1FF38D440040BBE5 /* ReachUTIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD4D1FF38D440040BBE5 /* ReachUTIL.swift */; };
 		77D4AD521FF38D560040BBE5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD501FF38D560040BBE5 /* MBProgressHUD.m */; };
 		77D4AD541FF38F990040BBE5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD531FF38F990040BBE5 /* NetworkManager.swift */; };
@@ -40,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7709E6E91FF4D0B700AA7E1D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		7709E6EA1FF4D0B700AA7E1D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		77D4AD271FF378140040BBE5 /* ReachApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReachApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D4AD2A1FF378140040BBE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77D4AD2F1FF378140040BBE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,8 +49,6 @@
 		77D4AD341FF378140040BBE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77D4AD371FF378140040BBE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77D4AD391FF378140040BBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77D4AD491FF38B660040BBE5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		77D4AD4A1FF38B660040BBE5 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		77D4AD4D1FF38D440040BBE5 /* ReachUTIL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachUTIL.swift; sourceTree = "<group>"; };
 		77D4AD4F1FF38D550040BBE5 /* ReachApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReachApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		77D4AD501FF38D560040BBE5 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
@@ -106,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7709E6E81FF4D0A300AA7E1D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7709E6EA1FF4D0B700AA7E1D /* LoginViewController.swift */,
+				7709E6E91FF4D0B700AA7E1D /* LoginViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		77D4AD1E1FF378140040BBE5 = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +137,8 @@
 				77D4AD551FF390420040BBE5 /* HelperClasses */,
 				77D4AD431FF378D00040BBE5 /* View */,
 				77D4AD411FF378BA0040BBE5 /* Model */,
-				77D4AD401FF378B20040BBE5 /* Controller */,
 				77D4AD2A1FF378140040BBE5 /* AppDelegate.swift */,
+				7709E6E81FF4D0A300AA7E1D /* Controller */,
 				77D4AD481FF38B560040BBE5 /* Login */,
 				77D4AD341FF378140040BBE5 /* Assets.xcassets */,
 				77D4AD361FF378140040BBE5 /* LaunchScreen.storyboard */,
@@ -145,13 +154,6 @@
 				77D4AD311FF378140040BBE5 /* ReachApp.xcdatamodeld */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		77D4AD401FF378B20040BBE5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		77D4AD411FF378BA0040BBE5 /* Model */ = {
@@ -179,8 +181,6 @@
 		77D4AD481FF38B560040BBE5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				77D4AD491FF38B660040BBE5 /* LoginViewController.swift */,
-				77D4AD4A1FF38B660040BBE5 /* LoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77D4AD4C1FF38B660040BBE5 /* LoginViewController.xib in Resources */,
+				7709E6EB1FF4D0B700AA7E1D /* LoginViewController.xib in Resources */,
 				77D4AD381FF378140040BBE5 /* LaunchScreen.storyboard in Resources */,
 				77D4AD351FF378140040BBE5 /* Assets.xcassets in Resources */,
 				77D4AD301FF378140040BBE5 /* Main.storyboard in Resources */,
@@ -324,7 +324,6 @@
 				77D4AD8A1FF390C90040BBE5 /* FSCalendar+Deprecated.m in Sources */,
 				77D4AD901FF395740040BBE5 /* User.swift in Sources */,
 				77D4AD541FF38F990040BBE5 /* NetworkManager.swift in Sources */,
-				77D4AD4B1FF38B660040BBE5 /* LoginViewController.swift in Sources */,
 				77D4AD871FF390C90040BBE5 /* FSCalendarConstants.m in Sources */,
 				77D4AD8E1FF390C90040BBE5 /* FSCalendarCell.m in Sources */,
 				77D4AD331FF378140040BBE5 /* ReachApp.xcdatamodeld in Sources */,
@@ -344,6 +343,7 @@
 				77D4AD2B1FF378140040BBE5 /* AppDelegate.swift in Sources */,
 				77D4AD4E1FF38D440040BBE5 /* ReachUTIL.swift in Sources */,
 				77D4AD8D1FF390C90040BBE5 /* FSCalendarScopeHandle.m in Sources */,
+				7709E6EC1FF4D0B700AA7E1D /* LoginViewController.swift in Sources */,
 				77D4AD851FF390C90040BBE5 /* FSCalendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
