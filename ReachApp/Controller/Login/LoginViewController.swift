@@ -173,7 +173,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         MBProgressHUD.showAdded(to: self.view, animated: true);
         
-        NetworkManager.sharedInstance.asynchronousWorkWithURL(baseUrl, ServiceType.POST, parameter, self, needToGetCookie: true) { (result,errorTitle , errorDescp) in
+        NetworkManager.sharedInstance.asynchronousWorkWithURL(baseUrl, ServiceType.POST, parameter, self, needToGetCookie: false) { (result,errorTitle , errorDescp) in
             if let result = result
             {
                 print(result)
@@ -235,7 +235,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                                 
                                 if(User.driverId.count > 0)
                                 {
-                                    ReachUTIL.sharedInstance.updateDeviceToken();                                    self.dismiss(animated: true, completion: nil);
+                                    ReachUTIL.sharedInstance.updateDeviceToken();
+                                    self.dismiss(animated: true, completion: nil);
                                 }
                                 else{
                                     ReachUTIL.sharedInstance.displayAlert(withTitle: "", andMessage: "Driver Id not found", self);
@@ -264,22 +265,5 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
 }
 
-/*
- guard let item = userRoless.first,
- 
- let roles = item["roles"] as? String,
- let uName = item["username"] as? String,
- let driverId = item["driverId"] as? Int
- 
- else{
- return;
- }
- 
- if uName == User.userName
- {
- uRoleseArr.append(roles);
- User.driverId = String(driverId);
- }
- */
 
 

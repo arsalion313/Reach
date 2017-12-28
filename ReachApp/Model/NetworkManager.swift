@@ -208,20 +208,19 @@ class NetworkManager: NSObject {
     func reLoginTechnique(WithServiceParameter previousParameter:[String:Any]?, completionHandler:@escaping serviceCompletionHandler, WithServiceType serviceTypePrevious:ServiceType, WithDelegateControlelr delegateController:UIViewController?)
     {
         
-        var  inputParam = [String:Any]()
-        inputParam["name"] = "mohsin"
-        inputParam["password"] = "123456"
+        //var  inputParam = [String:Any]()
+        //inputParam["name"] = User.userName;
+       // inputParam["password"] = User.password;
         
-        let query = "mutation {User {login(username: \(User.userName), password: \(User.password)){username _id,username,firstName,lastName,email,mobileNumber}}}";
+        let query = "mutation {User {login(username: \"\(User.userName)\", password: \"\(User.password)\"){username _id,username,firstName,lastName,email,mobileNumber}}}";
         
         var parameter = [String:Any]();
-        parameter["query"] = "";//LoginQuery;
-        parameter["variables"] = NetworkManager.sharedInstance.getJsonStringForVariable(inputParam)
+        parameter["query"] = query;//LoginQuery;
+        //parameter["variables"] = NetworkManager.sharedInstance.getJsonStringForVariable(inputParam)
         
         NetworkManager.sharedInstance.asynchronousWorkWithURL(baseUrl, ServiceType.POST, parameter, nil, needToGetCookie: true) { (result, errorTitle, errorType) in
             
-            
-            NetworkManager.sharedInstance.asynchronousWorkWithURL(baseUrl, serviceTypePrevious, previousParameter ?? nil,delegateController , needToGetCookie: false, withCompletionhandler: completionHandler)
+             NetworkManager.sharedInstance.asynchronousWorkWithURL(baseUrl, serviceTypePrevious, previousParameter ?? nil,delegateController , needToGetCookie: false, withCompletionhandler: completionHandler)
         }
     }
     
