@@ -15,6 +15,9 @@ class ReachUTIL: NSObject {
     @objc var isRightToLeftLayout:Bool = false
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    var changeStatusAllowed: Bool = false;
+    var acceptBtnAllowed: Bool = false;
+    
     override init() {
         
         print("ReachUTIL Init");
@@ -118,6 +121,63 @@ class ReachUTIL: NSObject {
             }
         }
         return false;
+    }
+    
+    
+    func updateDeviceToken()
+    {
+        if (!ReachUTIL.sharedInstance.hasValidText(User.userName))
+        {
+            return;
+        }
+        
+        if(User.deviceToken.count < 8 || User.driverId.count < 1)
+        {
+            return;
+        }
+        
+        let query = "mutation{Data{reach{driver{update(items:[{driverId:\(User.driverId),deviceToken:\"\(User.deviceToken)\"}])}}}}";
+        
+        //var inputParam = [String:Any]()
+        //inputParam["userId"] = userid;
+        
+        var parameter = [String:Any]();
+        parameter["query"] = query;
+        //parameter["variables"] = inputParam
+        
+        // parameter["variables"] = NetworkManager.sharedInstance.getJsonStringForVariable(inputParam);
+        
+        //MBProgressHUD.showAdded(to: self.view, animated: true);
+        
+        NetworkManager.sharedInstance.asynchronousWorkWithURL(baseUrl, ServiceType.POST, parameter, nil, needToGetCookie: false) { (result,errorTitle , errorDescp) in
+            
+            if let result = result
+            {
+                print(result)
+                
+                //MBProgressHUD.hide(for: self.view, animated: false);
+                
+                if let _ = result["data"] as? [String:Any] {
+                    
+                    UIApplication.shared.applicationIconBadgeNumber = 0;
+                }
+            }
+            else
+            {
+                // MBProgressHUD.hide(for: self.view, animated: false);
+                if let erroDescrip = errorDescp
+                {
+                    print(erroDescrip);
+                    //ReachUTIL.sharedInstance.displayAlert(withTitle: "", andMessage: erroDescrip, delegate);
+                    return;
+                }
+                //   ReachUTIL.sharedInstance.displayAlert(withTitle: "", andMessage: "", self);
+            }
+            
+        }
+            
+            
+     
     }
     
     func showLoginController(delegateController: UIViewController?) {

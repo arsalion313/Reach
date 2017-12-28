@@ -20,24 +20,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         //GitHub branch
         // Do any additional setup after loading the view.
         
-//        tf_userName.text = "55558"
-//        tf_password.text = "Targetadmin";
-//
-//        tf_userName.text = "06422914"
-//        tf_password.text = "1abcdefgh";
-        tf_userName.text = "77777777";
-        tf_password.text = "Godisone1";
-        
-//        tf_userName.text = "09090909";
-//        tf_password.text = "123456789";
-//        tf_userName.text = "05050505";
-//        tf_password.text = "123456";
-        
-        //self.submitForms(result: false);
-       //self.incrementLabel(to: 15000)
-        
-//        tf_userName.text = "10539156"
-//        tf_password.text = "123456sh";
+        tf_userName.text = "khalfan";
+        tf_password.text = "123456";
     }
     
     @IBAction func resignAction(_ sender: Any) {
@@ -98,9 +82,21 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             ReachUTIL.sharedInstance.displayAlert(withTitle: "", andMessage: "Please enter password.", self);
             return;
         }
+        
+        let query = "mutation {User {login(username: \"\(tf_userName.text!)\", password: \"\(tf_password.text!)\"){username _id,username,firstName,lastName,email,mobileNumber}}}";
+        
+       // var inputParam = [String:Any]()
+       // inputParam["userName"] = User.userName;
+        
+        var parameter = [String:Any]();
+        parameter["query"] = query;
+      //  parameter["variables"] = NetworkManager.sharedInstance.getJsonStringForVariable(inputParam);
+        
+        
         MBProgressHUD.showAdded(to: self.view, animated: true);
         
-        NetworkAppManager.asyncLoginApiUser(WithUsername: tf_userName.text!, WithPassword: tf_password.text!, WithDelegate: self) { (result, errorTitle, errorDescp) in
+        NetworkManager.sharedInstance.asynchronousWorkWithURL(baseUrl, ServiceType.POST, parameter, self, needToGetCookie: true) { (result, errorTitle, errorDescp) in
+            
             if let result = result
             {
                 //User.userID = "0";
@@ -112,38 +108,42 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                     
                     if let data = result["data"] as? [String:Any]
                     {
-                        if let login = data["logIn"] as? [String:Any]
+                        if let user = data["User"] as? [String:Any]
                         {
-                            if login["success"] as! Bool
+                            if let login = user["login"] as? [String:Any]
                             {
-                                if let profile = login["userProfile"] as? [String:Any]
+                                if let fName = login["username"] as? String
                                 {
-                                    User.userID = profile["userID"] as! String
-                                    print(User.userID);
-                                    
-                                    if let fName = profile["fullName"] as? String
+                                    User.userName = fName
+                                }
+                                if let fName = login["firstName"] as? String
+                                {
+                                    User.firstName = fName;
+                                    if let lName = login["lastName"] as? String
                                     {
-                                        User.firstName = fName
+                                        User.lastName = lName;
                                     }
-                                    
-                                    if let residentCardNoStr = profile["residentCardNo"] as? String
-                                    {
-                                        User.userResidentCardNo = residentCardNoStr
-                                    }
-                                    
-                                    User.userName = self.tf_userName.text!
-                                    
-                                    if ( KadirUTIL.sharedInstance.hasValidText(User.userResidentCardNo))
-                                    {
-                                        self.dismiss(animated: true, completion: nil);
-                                    }
-                                    
+                                }
+                                if let email = login["email"] as? String
+                                {
+                                    User.email = email
+                                }
+                                if let mobileNumber = login["mobileNumber"] as? String
+                                {
+                                    User.phoneNumber = mobileNumber
                                 }
                                 
-                            }
-                            else
-                            {
-                                KadirUTIL.sharedInstance.displayAlert(withTitle: "Error", andMessage: "Unable to login", self);
+                                if let userid = login["userid"] as? String
+                                {
+                                    User.userID = userid
+                                }
+                                
+                                // getUserRoles
+                                
+                                if(ReachUTIL.sharedInstance.hasValidText(User.userName))
+                                {
+                                    self.getUserRoles();
+                                }
                             }
                         }
                     }
@@ -153,28 +153,23 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             else
             {
                 MBProgressHUD.hide(for: self.view, animated: false);
-                KadirUTIL.sharedInstance.displayAlert(withTitle: errorTitle, andMessage: errorDescp, self);
+                ReachUTIL.sharedInstance.displayAlert(withTitle: errorTitle, andMessage: errorDescp, self);
             }
         }
         
         
     }
     
-//    func isStringMatched(with mString: String) -> Bool
-//    {
-//        let comptenceName: NSString = NSString(string: mString)
-//        
-//        return  (comptenceName.range(of: KadirUTIL.sharedInstance.userSpecialization, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
-//    }
-    
     func getUserRoles()
     {
         var inputParam = [String:Any]()
         inputParam["userName"] = User.userName;
         
+        let userRoleQuery = "query{Data{reach{userRoles(username:\"\(User.userName)\") {username,roles,driverId,isAvailable,driverPhoto}}}}";
+        
         var parameter = [String:Any]();
-        parameter["query"] = ""// UserRoles;
-        parameter["variables"] = NetworkManager.sharedInstance.getJsonStringForVariable(inputParam);
+        parameter["query"] = userRoleQuery;// UserRoles;
+       //parameter["variables"] = NetworkManager.sharedInstance.getJsonStringForVariable(inputParam);
         
         MBProgressHUD.showAdded(to: self.view, animated: true);
         
@@ -194,13 +189,39 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                             var uRoleseArr = [String]();
                             if let userRoless = reachData["userRoles"] as? [[String:Any]] {
                                 
+                                if (userRoless.count < 1)
+                                {
+                                    ReachUTIL.sharedInstance.displayAlert(withTitle: "", andMessage: "User roles not found", self);
+                                    
+                                    return;
+                                }
+                                
                                 let reqDat = userRoless.filter({ (dicVal) -> Bool in
                                     if dicVal["username"] as! String == User.userName
                                         
                                     {
-                                        //print(dicVal["roles"]!);
-                                        uRoleseArr.append(dicVal["roles"] as! String);
+                                       // print(dicVal["roles"] as! String);
+                                        
+                                        let role = dicVal["roles"] as! String;
+                                        uRoleseArr.append(role);
                                         User.driverId = String(dicVal["driverId"] as! Int);
+                                       // print(String(dicVal["driverId"] as! Int));
+                                        
+                                        if (role == kDriver)
+                                        {
+                                            ReachUTIL.sharedInstance.changeStatusAllowed = true;
+                                        }
+
+                                        if (role == kCorresponder || role == kVehicleCoordinator)
+                                        {
+                                            ReachUTIL.sharedInstance.acceptBtnAllowed = true;
+                                        }
+                                        
+                                        if let isavil = dicVal["isAvailable"] as? Bool
+                                        {
+                                            User.isAvailable = isavil;
+                                        }
+                                        
                                         return true
                                     }
                                     else
@@ -214,7 +235,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                                 
                                 if(User.driverId.count > 0)
                                 {
-                                    self.dismiss(animated: true, completion: nil);
+                                    ReachUTIL.sharedInstance.updateDeviceToken();                                    self.dismiss(animated: true, completion: nil);
                                 }
                                 else{
                                     ReachUTIL.sharedInstance.displayAlert(withTitle: "", andMessage: "Driver Id not found", self);

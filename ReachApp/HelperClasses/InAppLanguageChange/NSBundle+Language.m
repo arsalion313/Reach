@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 //#import "MereUtility.h"
-#import "Kadir-Swift.h"
+#import "ReachApp-Swift.h"
 
 #ifdef USE_ON_FLY_LOCALIZATION
 
@@ -57,7 +57,7 @@ static const char kBundleKey = 0;
             [[UITextField appearance] setSemanticContentAttribute:UISemanticContentAttributeForceRightToLeft];
             
             //appUtility.UIInterfaceLayoutDirectionRightToLeft = YES;
-            [KadirUTIL sharedInstance].isRightToLeftLayout = YES;
+            [ReachUTIL sharedInstance].isRightToLeftLayout = YES;
             v = nil;
         }
     }else {
@@ -70,7 +70,7 @@ static const char kBundleKey = 0;
             [[UITextField appearance] setSemanticContentAttribute:UISemanticContentAttributeForceLeftToRight];
             
             //appUtility.UIInterfaceLayoutDirectionRightToLeft = NO;
-            [KadirUTIL sharedInstance].isRightToLeftLayout = NO;
+            [ReachUTIL sharedInstance].isRightToLeftLayout = NO;
             v = nil;
         }
     }

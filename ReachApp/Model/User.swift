@@ -224,7 +224,7 @@ class User: NSObject {
     
     
     
-    static var userRoles:Array<String> {
+    static var userRoles:[String] {
         get{
             if ( UserDefaults.standard.object(forKey: "userRoles") != nil)
             {
@@ -272,26 +272,16 @@ class User: NSObject {
     }
     
     
-    
-    
-    
-    
-    
-    static var isFacePrintUpdates:Bool {
+    static var isAvailable:Bool {
         get{
             
-            return UserDefaults.standard.bool(forKey: "isFacePrintUpdates")
-            
-            
-            
+            return UserDefaults.standard.bool(forKey: "isAvailable")
         }
         set{
-            UserDefaults.standard.set(newValue, forKey: "isFacePrintUpdates")
+            UserDefaults.standard.set(newValue, forKey: "isAvailable")
             
         }
     }
-    
-    
     
     
     

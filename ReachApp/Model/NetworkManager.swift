@@ -75,6 +75,7 @@ class NetworkManager: NSObject {
                 cookieStore.deleteCookie(cookie)
             }
         }
+        
         let session  = URLSession.shared;
         let task =  session.dataTask(with: request) { data, response, error in
             
@@ -210,6 +211,8 @@ class NetworkManager: NSObject {
         var  inputParam = [String:Any]()
         inputParam["name"] = "mohsin"
         inputParam["password"] = "123456"
+        
+        let query = "mutation {User {login(username: \(User.userName), password: \(User.password)){username _id,username,firstName,lastName,email,mobileNumber}}}";
         
         var parameter = [String:Any]();
         parameter["query"] = "";//LoginQuery;
