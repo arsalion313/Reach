@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77D4AD2B1FF378140040BBE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD2A1FF378140040BBE5 /* AppDelegate.swift */; };
+		77D4AD301FF378140040BBE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AD2E1FF378140040BBE5 /* Main.storyboard */; };
+		77D4AD331FF378140040BBE5 /* ReachApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD311FF378140040BBE5 /* ReachApp.xcdatamodeld */; };
+		77D4AD351FF378140040BBE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AD341FF378140040BBE5 /* Assets.xcassets */; };
+		77D4AD381FF378140040BBE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AD361FF378140040BBE5 /* LaunchScreen.storyboard */; };
+		77D4AD4B1FF38B660040BBE5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD491FF38B660040BBE5 /* LoginViewController.swift */; };
+		77D4AD4C1FF38B660040BBE5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77D4AD4A1FF38B660040BBE5 /* LoginViewController.xib */; };
+		77D4AD4E1FF38D440040BBE5 /* ReachUTIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD4D1FF38D440040BBE5 /* ReachUTIL.swift */; };
+		77D4AD521FF38D560040BBE5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD501FF38D560040BBE5 /* MBProgressHUD.m */; };
+		77D4AD541FF38F990040BBE5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD531FF38F990040BBE5 /* NetworkManager.swift */; };
+		77D4AD5C1FF390680040BBE5 /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD581FF390680040BBE5 /* NSBundle+Language.m */; };
+		77D4AD5D1FF390680040BBE5 /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD5B1FF390680040BBE5 /* LanguageManager.m */; };
+		77D4AD7F1FF390C90040BBE5 /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD5F1FF390C60040BBE5 /* FSCalendarAppearance.m */; };
+		77D4AD801FF390C90040BBE5 /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD601FF390C60040BBE5 /* FSCalendarCalculator.m */; };
+		77D4AD811FF390C90040BBE5 /* FSCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD611FF390C60040BBE5 /* FSCalendarHeaderView.m */; };
+		77D4AD821FF390C90040BBE5 /* FSCalendarDelegationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD621FF390C60040BBE5 /* FSCalendarDelegationFactory.m */; };
+		77D4AD831FF390C90040BBE5 /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD631FF390C60040BBE5 /* FSCalendarStickyHeader.m */; };
+		77D4AD841FF390C90040BBE5 /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD651FF390C70040BBE5 /* FSCalendarTransitionCoordinator.m */; };
+		77D4AD851FF390C90040BBE5 /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD691FF390C70040BBE5 /* FSCalendar.m */; };
+		77D4AD861FF390C90040BBE5 /* FSCalendarCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD6A1FF390C70040BBE5 /* FSCalendarCollectionViewLayout.m */; };
+		77D4AD871FF390C90040BBE5 /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD6B1FF390C70040BBE5 /* FSCalendarConstants.m */; };
+		77D4AD881FF390C90040BBE5 /* FSCalendarExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD6E1FF390C70040BBE5 /* FSCalendarExtensions.m */; };
+		77D4AD891FF390C90040BBE5 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD711FF390C70040BBE5 /* FSCalendarCollectionView.m */; };
+		77D4AD8A1FF390C90040BBE5 /* FSCalendar+Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD761FF390C80040BBE5 /* FSCalendar+Deprecated.m */; };
+		77D4AD8B1FF390C90040BBE5 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD791FF390C80040BBE5 /* FSCalendarWeekdayView.m */; };
+		77D4AD8C1FF390C90040BBE5 /* FSCalendarDelegationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD7A1FF390C80040BBE5 /* FSCalendarDelegationProxy.m */; };
+		77D4AD8D1FF390C90040BBE5 /* FSCalendarScopeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD7C1FF390C80040BBE5 /* FSCalendarScopeHandle.m */; };
+		77D4AD8E1FF390C90040BBE5 /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD7E1FF390C90040BBE5 /* FSCalendarCell.m */; };
+		77D4AD901FF395740040BBE5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD8F1FF395740040BBE5 /* User.swift */; };
+		77D4AD921FF396930040BBE5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4AD911FF396930040BBE5 /* Reachability.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		77D4AD271FF378140040BBE5 /* ReachApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReachApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D4AD2A1FF378140040BBE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		77D4AD2F1FF378140040BBE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		77D4AD321FF378140040BBE5 /* ReachApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReachApp.xcdatamodel; sourceTree = "<group>"; };
+		77D4AD341FF378140040BBE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77D4AD371FF378140040BBE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		77D4AD391FF378140040BBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77D4AD491FF38B660040BBE5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		77D4AD4A1FF38B660040BBE5 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		77D4AD4D1FF38D440040BBE5 /* ReachUTIL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachUTIL.swift; sourceTree = "<group>"; };
+		77D4AD4F1FF38D550040BBE5 /* ReachApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReachApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		77D4AD501FF38D560040BBE5 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		77D4AD511FF38D560040BBE5 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		77D4AD531FF38F990040BBE5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		77D4AD571FF390680040BBE5 /* NSBundle+Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Language.h"; sourceTree = "<group>"; };
+		77D4AD581FF390680040BBE5 /* NSBundle+Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Language.m"; sourceTree = "<group>"; };
+		77D4AD591FF390680040BBE5 /* LanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageManager.h; sourceTree = "<group>"; };
+		77D4AD5A1FF390680040BBE5 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		77D4AD5B1FF390680040BBE5 /* LanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageManager.m; sourceTree = "<group>"; };
+		77D4AD5F1FF390C60040BBE5 /* FSCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarAppearance.m; sourceTree = "<group>"; };
+		77D4AD601FF390C60040BBE5 /* FSCalendarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCalculator.m; sourceTree = "<group>"; };
+		77D4AD611FF390C60040BBE5 /* FSCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarHeaderView.m; sourceTree = "<group>"; };
+		77D4AD621FF390C60040BBE5 /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
+		77D4AD631FF390C60040BBE5 /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarStickyHeader.m; sourceTree = "<group>"; };
+		77D4AD641FF390C70040BBE5 /* FSCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarHeaderView.h; sourceTree = "<group>"; };
+		77D4AD651FF390C70040BBE5 /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
+		77D4AD661FF390C70040BBE5 /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionView.h; sourceTree = "<group>"; };
+		77D4AD671FF390C70040BBE5 /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarStickyHeader.h; sourceTree = "<group>"; };
+		77D4AD681FF390C70040BBE5 /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendar.h; sourceTree = "<group>"; };
+		77D4AD691FF390C70040BBE5 /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendar.m; sourceTree = "<group>"; };
+		77D4AD6A1FF390C70040BBE5 /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
+		77D4AD6B1FF390C70040BBE5 /* FSCalendarConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarConstants.m; sourceTree = "<group>"; };
+		77D4AD6C1FF390C70040BBE5 /* FSCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCell.h; sourceTree = "<group>"; };
+		77D4AD6D1FF390C70040BBE5 /* FSCalendarDelegationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationFactory.h; sourceTree = "<group>"; };
+		77D4AD6E1FF390C70040BBE5 /* FSCalendarExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarExtensions.m; sourceTree = "<group>"; };
+		77D4AD6F1FF390C70040BBE5 /* FSCalendarExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarExtensions.h; sourceTree = "<group>"; };
+		77D4AD701FF390C70040BBE5 /* FSCalendarConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarConstants.h; sourceTree = "<group>"; };
+		77D4AD711FF390C70040BBE5 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
+		77D4AD721FF390C70040BBE5 /* FSCalendarTransitionCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarTransitionCoordinator.h; sourceTree = "<group>"; };
+		77D4AD731FF390C80040BBE5 /* FSCalendarDelegationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationProxy.h; sourceTree = "<group>"; };
+		77D4AD741FF390C80040BBE5 /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
+		77D4AD751FF390C80040BBE5 /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarWeekdayView.h; sourceTree = "<group>"; };
+		77D4AD761FF390C80040BBE5 /* FSCalendar+Deprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCalendar+Deprecated.m"; sourceTree = "<group>"; };
+		77D4AD771FF390C80040BBE5 /* FSCalendarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCalculator.h; sourceTree = "<group>"; };
+		77D4AD781FF390C80040BBE5 /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
+		77D4AD791FF390C80040BBE5 /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		77D4AD7A1FF390C80040BBE5 /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
+		77D4AD7B1FF390C80040BBE5 /* FSCalendarScopeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarScopeHandle.h; sourceTree = "<group>"; };
+		77D4AD7C1FF390C80040BBE5 /* FSCalendarScopeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarScopeHandle.m; sourceTree = "<group>"; };
+		77D4AD7D1FF390C90040BBE5 /* FSCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarAppearance.h; sourceTree = "<group>"; };
+		77D4AD7E1FF390C90040BBE5 /* FSCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCell.m; sourceTree = "<group>"; };
+		77D4AD8F1FF395740040BBE5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		77D4AD911FF396930040BBE5 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77D4AD241FF378140040BBE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77D4AD1E1FF378140040BBE5 = {
+			isa = PBXGroup;
+			children = (
+				77D4AD291FF378140040BBE5 /* ReachApp */,
+				77D4AD281FF378140040BBE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77D4AD281FF378140040BBE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AD271FF378140040BBE5 /* ReachApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77D4AD291FF378140040BBE5 /* ReachApp */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AD551FF390420040BBE5 /* HelperClasses */,
+				77D4AD431FF378D00040BBE5 /* View */,
+				77D4AD411FF378BA0040BBE5 /* Model */,
+				77D4AD401FF378B20040BBE5 /* Controller */,
+				77D4AD2A1FF378140040BBE5 /* AppDelegate.swift */,
+				77D4AD481FF38B560040BBE5 /* Login */,
+				77D4AD341FF378140040BBE5 /* Assets.xcassets */,
+				77D4AD361FF378140040BBE5 /* LaunchScreen.storyboard */,
+				77D4AD391FF378140040BBE5 /* Info.plist */,
+				77D4AD3F1FF378860040BBE5 /* CoreData */,
+			);
+			path = ReachApp;
+			sourceTree = "<group>";
+		};
+		77D4AD3F1FF378860040BBE5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AD311FF378140040BBE5 /* ReachApp.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		77D4AD401FF378B20040BBE5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77D4AD411FF378BA0040BBE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AD531FF38F990040BBE5 /* NetworkManager.swift */,
+				77D4AD4D1FF38D440040BBE5 /* ReachUTIL.swift */,
+				77D4AD511FF38D560040BBE5 /* MBProgressHUD.h */,
+				77D4AD501FF38D560040BBE5 /* MBProgressHUD.m */,
+				77D4AD911FF396930040BBE5 /* Reachability.swift */,
+				77D4AD8F1FF395740040BBE5 /* User.swift */,
+				77D4AD4F1FF38D550040BBE5 /* ReachApp-Bridging-Header.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77D4AD431FF378D00040BBE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AD2E1FF378140040BBE5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77D4AD481FF38B560040BBE5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AD491FF38B660040BBE5 /* LoginViewController.swift */,
+				77D4AD4A1FF38B660040BBE5 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		77D4AD551FF390420040BBE5 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AD5E1FF390B60040BBE5 /* FScalender */,
+				77D4AD561FF3904D0040BBE5 /* InAppLanguageChange */,
+			);
+			path = HelperClasses;
+			sourceTree = "<group>";
+		};
+		77D4AD561FF3904D0040BBE5 /* InAppLanguageChange */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AD5A1FF390680040BBE5 /* Defines.h */,
+				77D4AD591FF390680040BBE5 /* LanguageManager.h */,
+				77D4AD5B1FF390680040BBE5 /* LanguageManager.m */,
+				77D4AD571FF390680040BBE5 /* NSBundle+Language.h */,
+				77D4AD581FF390680040BBE5 /* NSBundle+Language.m */,
+			);
+			path = InAppLanguageChange;
+			sourceTree = "<group>";
+		};
+		77D4AD5E1FF390B60040BBE5 /* FScalender */ = {
+			isa = PBXGroup;
+			children = (
+				77D4AD681FF390C70040BBE5 /* FSCalendar.h */,
+				77D4AD691FF390C70040BBE5 /* FSCalendar.m */,
+				77D4AD761FF390C80040BBE5 /* FSCalendar+Deprecated.m */,
+				77D4AD7D1FF390C90040BBE5 /* FSCalendarAppearance.h */,
+				77D4AD5F1FF390C60040BBE5 /* FSCalendarAppearance.m */,
+				77D4AD771FF390C80040BBE5 /* FSCalendarCalculator.h */,
+				77D4AD601FF390C60040BBE5 /* FSCalendarCalculator.m */,
+				77D4AD6C1FF390C70040BBE5 /* FSCalendarCell.h */,
+				77D4AD7E1FF390C90040BBE5 /* FSCalendarCell.m */,
+				77D4AD661FF390C70040BBE5 /* FSCalendarCollectionView.h */,
+				77D4AD711FF390C70040BBE5 /* FSCalendarCollectionView.m */,
+				77D4AD741FF390C80040BBE5 /* FSCalendarCollectionViewLayout.h */,
+				77D4AD6A1FF390C70040BBE5 /* FSCalendarCollectionViewLayout.m */,
+				77D4AD701FF390C70040BBE5 /* FSCalendarConstants.h */,
+				77D4AD6B1FF390C70040BBE5 /* FSCalendarConstants.m */,
+				77D4AD6D1FF390C70040BBE5 /* FSCalendarDelegationFactory.h */,
+				77D4AD621FF390C60040BBE5 /* FSCalendarDelegationFactory.m */,
+				77D4AD731FF390C80040BBE5 /* FSCalendarDelegationProxy.h */,
+				77D4AD7A1FF390C80040BBE5 /* FSCalendarDelegationProxy.m */,
+				77D4AD781FF390C80040BBE5 /* FSCalendarDynamicHeader.h */,
+				77D4AD6F1FF390C70040BBE5 /* FSCalendarExtensions.h */,
+				77D4AD6E1FF390C70040BBE5 /* FSCalendarExtensions.m */,
+				77D4AD641FF390C70040BBE5 /* FSCalendarHeaderView.h */,
+				77D4AD611FF390C60040BBE5 /* FSCalendarHeaderView.m */,
+				77D4AD7B1FF390C80040BBE5 /* FSCalendarScopeHandle.h */,
+				77D4AD7C1FF390C80040BBE5 /* FSCalendarScopeHandle.m */,
+				77D4AD671FF390C70040BBE5 /* FSCalendarStickyHeader.h */,
+				77D4AD631FF390C60040BBE5 /* FSCalendarStickyHeader.m */,
+				77D4AD721FF390C70040BBE5 /* FSCalendarTransitionCoordinator.h */,
+				77D4AD651FF390C70040BBE5 /* FSCalendarTransitionCoordinator.m */,
+				77D4AD751FF390C80040BBE5 /* FSCalendarWeekdayView.h */,
+				77D4AD791FF390C80040BBE5 /* FSCalendarWeekdayView.m */,
+			);
+			path = FScalender;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77D4AD261FF378140040BBE5 /* ReachApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77D4AD3C1FF378140040BBE5 /* Build configuration list for PBXNativeTarget "ReachApp" */;
+			buildPhases = (
+				77D4AD231FF378140040BBE5 /* Sources */,
+				77D4AD241FF378140040BBE5 /* Frameworks */,
+				77D4AD251FF378140040BBE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReachApp;
+			productName = ReachApp;
+			productReference = 77D4AD271FF378140040BBE5 /* ReachApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77D4AD1F1FF378140040BBE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Waqas;
+				TargetAttributes = {
+					77D4AD261FF378140040BBE5 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 77D4AD221FF378140040BBE5 /* Build configuration list for PBXProject "ReachApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77D4AD1E1FF378140040BBE5;
+			productRefGroup = 77D4AD281FF378140040BBE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77D4AD261FF378140040BBE5 /* ReachApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77D4AD251FF378140040BBE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D4AD4C1FF38B660040BBE5 /* LoginViewController.xib in Resources */,
+				77D4AD381FF378140040BBE5 /* LaunchScreen.storyboard in Resources */,
+				77D4AD351FF378140040BBE5 /* Assets.xcassets in Resources */,
+				77D4AD301FF378140040BBE5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77D4AD231FF378140040BBE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D4AD881FF390C90040BBE5 /* FSCalendarExtensions.m in Sources */,
+				77D4AD8C1FF390C90040BBE5 /* FSCalendarDelegationProxy.m in Sources */,
+				77D4AD8A1FF390C90040BBE5 /* FSCalendar+Deprecated.m in Sources */,
+				77D4AD901FF395740040BBE5 /* User.swift in Sources */,
+				77D4AD541FF38F990040BBE5 /* NetworkManager.swift in Sources */,
+				77D4AD4B1FF38B660040BBE5 /* LoginViewController.swift in Sources */,
+				77D4AD871FF390C90040BBE5 /* FSCalendarConstants.m in Sources */,
+				77D4AD8E1FF390C90040BBE5 /* FSCalendarCell.m in Sources */,
+				77D4AD331FF378140040BBE5 /* ReachApp.xcdatamodeld in Sources */,
+				77D4AD7F1FF390C90040BBE5 /* FSCalendarAppearance.m in Sources */,
+				77D4AD5D1FF390680040BBE5 /* LanguageManager.m in Sources */,
+				77D4AD891FF390C90040BBE5 /* FSCalendarCollectionView.m in Sources */,
+				77D4AD921FF396930040BBE5 /* Reachability.swift in Sources */,
+				77D4AD521FF38D560040BBE5 /* MBProgressHUD.m in Sources */,
+				77D4AD861FF390C90040BBE5 /* FSCalendarCollectionViewLayout.m in Sources */,
+				77D4AD831FF390C90040BBE5 /* FSCalendarStickyHeader.m in Sources */,
+				77D4AD801FF390C90040BBE5 /* FSCalendarCalculator.m in Sources */,
+				77D4AD8B1FF390C90040BBE5 /* FSCalendarWeekdayView.m in Sources */,
+				77D4AD821FF390C90040BBE5 /* FSCalendarDelegationFactory.m in Sources */,
+				77D4AD811FF390C90040BBE5 /* FSCalendarHeaderView.m in Sources */,
+				77D4AD841FF390C90040BBE5 /* FSCalendarTransitionCoordinator.m in Sources */,
+				77D4AD5C1FF390680040BBE5 /* NSBundle+Language.m in Sources */,
+				77D4AD2B1FF378140040BBE5 /* AppDelegate.swift in Sources */,
+				77D4AD4E1FF38D440040BBE5 /* ReachUTIL.swift in Sources */,
+				77D4AD8D1FF390C90040BBE5 /* FSCalendarScopeHandle.m in Sources */,
+				77D4AD851FF390C90040BBE5 /* FSCalendar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		77D4AD2E1FF378140040BBE5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77D4AD2F1FF378140040BBE5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		77D4AD361FF378140040BBE5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77D4AD371FF378140040BBE5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77D4AD3A1FF378140040BBE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		77D4AD3B1FF378140040BBE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77D4AD3D1FF378140040BBE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = HN4947DYGD;
+				INFOPLIST_FILE = ReachApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.target.reporter.ReachApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5d12b0cc-f005-4a87-b567-6bd8f34546b0";
+				PROVISIONING_PROFILE_SPECIFIER = dev_reporter;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReachApp/Model/ReachApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		77D4AD3E1FF378140040BBE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = HN4947DYGD;
+				INFOPLIST_FILE = ReachApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.target.reporter.ReachApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5d12b0cc-f005-4a87-b567-6bd8f34546b0";
+				PROVISIONING_PROFILE_SPECIFIER = dev_reporter;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReachApp/Model/ReachApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77D4AD221FF378140040BBE5 /* Build configuration list for PBXProject "ReachApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D4AD3A1FF378140040BBE5 /* Debug */,
+				77D4AD3B1FF378140040BBE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77D4AD3C1FF378140040BBE5 /* Build configuration list for PBXNativeTarget "ReachApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D4AD3D1FF378140040BBE5 /* Debug */,
+				77D4AD3E1FF378140040BBE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		77D4AD311FF378140040BBE5 /* ReachApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				77D4AD321FF378140040BBE5 /* ReachApp.xcdatamodel */,
+			);
+			currentVersion = 77D4AD321FF378140040BBE5 /* ReachApp.xcdatamodel */;
+			path = ReachApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 77D4AD1F1FF378140040BBE5 /* Project object */;
+}
